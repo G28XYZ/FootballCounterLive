@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/style_for_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text=""-->
+<!--        android:textColor="@android:color/background_dark"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.161"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.054" />-->
+
+<!--    <com.vlad1m1r.lemniscate.BernoullisProgressView-->
+<!--        android:id="@+id/loading"-->
+<!--        android:layout_width="520dp"-->
+<!--        android:layout_height="320dp"-->
+<!--        app:duration="2000"-->
+<!--        app:hasHole="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:lineColor="@color/colorPrimary"-->
+<!--        app:maxLineLength="0.8"-->
+<!--        app:minLineLength="0.4"-->
+<!--        app:sizeMultiplier="1"-->
+<!--        app:strokeWidth="5dp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <com.timqi.sectorprogressview.ColorfulRingProgressView
+        android:id="@+id/loading_round"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:visibility="invisible"
+        app:bgColor="#e1e1e1"
+        app:fgColorEnd="#ff4800"
+        app:fgColorStart="#ffe400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:percent="0"
+        app:startAngle="0"
+        app:strokeWidth="6dp" />
+
+    <ListView
+        android:id="@+id/list_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/refresh_btn"
+        android:layout_width="151dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/for_ref_btn"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/obnovit_ssilki_80_2ms"
+        android:textColor="#1E90FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_View" />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/loading_horizontal"
+        app:progress_max="1000"
+        app:progress_unreached_color="#E6E6FA"
+        app:progress_reached_color="#00BFFF"
+        app:progress_unreached_bar_height="5dp"
+        app:progress_reached_bar_height="10dp"
+        app:progress_text_size="15sp"
+        app:progress_text_color="#00BFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refresh_btn"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

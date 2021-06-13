@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:layout_gravity="center|top"
+    android:orientation="vertical"
+    android:background="@drawable/style_for_fragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/titleTextMatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6A5ACD"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleTextTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/homeTextDetails1"
+                android:layout_width="160dp"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="10dp"
+                android:fontFamily="@font/play"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/awayTextDetails1"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:layout_gravity="right"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/play"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleTextTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/homeTextDetails2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+                android:textSize="10dp"
+                android:fontFamily="@font/play"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/awayTextDetails2"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:layout_gravity="right"
+                android:textSize="10dp"
+                android:fontFamily="@font/play"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp">
+        <Button
+            android:id="@+id/homeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:background="@drawable/for_score_result"
+            android:fontFamily="@font/play"/>
+
+        <Button
+            android:id="@+id/allText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/for_score_result"
+            android:textSize="12dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/play"/>
+
+
+        <Button
+            android:id="@+id/awayText"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/for_score_result"
+            android:fontFamily="@font/play"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

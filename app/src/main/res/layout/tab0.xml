@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+
+    android:background="@drawable/style_for_fragment"
+    tools:context=".MainActivity">
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            android:id="@+id/loading_score_horizontal"
+            app:progress_max="1000"
+            app:progress_unreached_color="#E6E6FA"
+            app:progress_reached_color="#00BFFF"
+            app:progress_unreached_bar_height="5dp"
+            app:progress_reached_bar_height="10dp"
+            app:progress_text_size="15sp"
+            app:progress_text_color="#00BFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            tools:ignore="MissingConstraints" />
+
+        <ListView
+            android:id="@+id/listViewScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            tools:listheader="@layout/tab0"/>
+
+</LinearLayout>

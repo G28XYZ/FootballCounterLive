@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="StyleHint" parent="Widget.Design.TextInputLayout">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomAnimationButton" parent="@style/Widget.AppCompat.EditText">
+        <item name="colorButtonNormal">#1a237e</item>
+        <item name="colorControlHighlight">#673ab7</item>
+        <item name="android:stateListAnimator" tools:targetApi="lollipop">@animator/animanion_btn</item>
+    </style>
+
+</resources>

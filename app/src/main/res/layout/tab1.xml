@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab1"
+    android:tag=""
+    android:background="@drawable/style_for_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/for_link"
+        android:tag="Здесь должна быть ссылка на матч"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <!--###  ###-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="25dp"
+                android:gravity="center|top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:text="Тотал на тайм" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Расчёт" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:text="Live-тотал" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_foul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Фолы"
+                    android:textSize="14dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/foul_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/style_for_info__standart">
+
+                <TextView
+                    android:id="@+id/start_total_foul"
+                    android:paddingLeft="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/firacode_regular"
+                    android:text="~~>"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText_foul"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Фолы"
+                        android:textColorHint="@color/colorAccent"
+                        android:text=""
+                        android:fontFamily="@font/blackopsone"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/but_foul_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/but_foul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textSize="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/checkBox_foul"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar_foul"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="180"
+                    android:progress="0" />
+            </LinearLayout>
+            <!--###  ###-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Ауты"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/out_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/style_for_info__standart">
+
+                <TextView
+                    android:id="@+id/start_total_out"
+                    android:paddingLeft="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/firacode_regular"
+                    android:text="~~>"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editText_out"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:ems="10"
+                        android:text=""
+                        android:hint="Ауты"
+                        android:fontFamily="@font/blackopsone"
+                        android:textSize="14dp"
+                        android:inputType="numberDecimal"
+                        android:autofillHints="" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/but_out_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/but_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textSize="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/checkBox_out"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar_out"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="180"
+                    android:progress="0"/>
+            </LinearLayout>
+            <!--###  ###-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_sot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Удары в створ"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sot_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/style_for_info__standart">
+
+                <TextView
+                    android:id="@+id/start_total_sot"
+                    android:paddingLeft="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/firacode_regular"
+                    android:text="~~>"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/StyleHint">
+                    <EditText
+                        android:id="@+id/editText_sot"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Удары \nв створ"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/blackopsone"
+                        android:text=""
+                        android:inputType="numberDecimal"
+                        android:autofillHints="" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/but_sot_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/but_sot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textSize="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/checkBox_sot"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar_sot"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="180"
+                    android:progress="0"/>
+            </LinearLayout>
+            <!--###  ###-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_sat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Удары от ворот"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/style_for_info__standart">
+
+                <TextView
+                    android:id="@+id/start_total_sat"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/firacode_regular"
+                    android:paddingLeft="5dp"
+                    android:text="~~>" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/StyleHint">
+
+                    <EditText
+                        android:id="@+id/editText_sat"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Удары\nот ворот"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/blackopsone"
+                        android:text=""
+                        android:inputType="numberDecimal"
+                        android:autofillHints="" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/but_sat_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/but_sat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textSize="10dp"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/checkBox_sat"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar_sat"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="180"
+                    android:progress="0" />
+            </LinearLayout>
+            <!--###  ###-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_corner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Угловые"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/corner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/style_for_info__standart">
+
+                <TextView
+                    android:id="@+id/start_total_corner"
+                    android:paddingLeft="5dp"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/firacode_regular"
+                    android:text="~~>"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/StyleHint">
+
+                    <EditText
+                        android:id="@+id/editText_corner"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Угловые"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="14dp"
+                        android:fontFamily="@font/blackopsone"
+                        android:inputType="numberDecimal"
+                        android:autofillHints="" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/but_corner_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textSize="14dp" />
+
+                <Button
+                    android:id="@+id/but_corner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:drawable/editbox_background"
+                    android:text=""
+                    android:textSize="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+<!--                    <CheckBox-->
+<!--                        android:id="@+id/checkBox_corner"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content" />-->
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar_corner"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="180"
+                    android:progress="0" />
+
+<!--                <com.kofigyan.stateprogressbar.StateProgressBar-->
+<!--                    android:id="@+id/progressBar_corner"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:spb_currentStateNumber="one"-->
+<!--                    app:spb_maxStateNumber="three"-->
+<!--                    app:spb_stateBackgroundColor="#BDBDBD"-->
+<!--                    app:spb_stateForegroundColor="#009688"-->
+<!--                    app:spb_stateNumberBackgroundColor="#808080"-->
+<!--                    app:spb_stateNumberForegroundColor="#eeeeee"-->
+<!--                    app:spb_currentStateDescriptionColor="#009688"-->
+<!--                    app:spb_stateDescriptionColor="#808080"-->
+<!--                    app:spb_animateToCurrentProgressState="true"-->
+<!--                    app:spb_checkStateCompleted="true"/>-->
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ИНФОРМАЦИЯ:\nРАСЧЁТ ВЫПОЛНЯЕТСЯ ТОЛЬКО ДЛЯ ТОТАЛ МЕНЬШЕ"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
